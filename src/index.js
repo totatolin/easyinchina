@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
+
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+
+import './style/base.scss';
+import './style/color.scss';
+import './style/font.scss';
+import './style/style.scss';
 
 // import { LocaleProvider, DatePicker, message } from 'antd';
 // import zhCN from 'antd/lib/locale-provider/zh_CN';
