@@ -1,0 +1,365 @@
+/*
+* z-index
+*/
+@for $i from 1 through 1001 {
+  .z#{$i} {
+    z-index: $i;
+  }
+}
+
+/**
+ * visible
+ */
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+/**
+ * width & height
+ */
+.wh-full {
+  width: 100%;
+  height: 100%;
+}
+.wa {
+  width: auto;
+}
+/**
+ * width
+ * 以百分比为单位
+ */
+// .w5p, .w10p, ..., w95p
+@for $i from 1 through 19 {
+  .w#{$i*5}p {
+    width: 5% * $i;
+  }
+}
+.wfull {
+  width: 100%;
+}
+/**
+ * width
+ * 以px为单位
+ */
+// .w5, .w10, ..., w800
+@for $i from 1 through 160 {
+  .w#{$i*5} {
+    width: 5px * $i;
+  }
+}
+/**
+ * height
+ * 以px为单位
+ */
+// .h5, .h10, ..., h400
+@for $i from 1 through 80 {
+  .h#{$i*5} {
+    height: 5px * $i;
+  }
+}
+/**
+ * height
+ * 以百分比为单位
+ */
+.hfull {
+  height: 100%;
+}
+/**
+ * min-height
+ * 以px为单位
+ */
+// .mh10, .mh20, ..., mh100
+@for $i from 1 through 10 {
+  .mh#{$i*10} {
+    min-height: 10px * $i;
+  }
+}
+/**
+ * max-width
+ */
+// .mw100, .mw110, ..., mw200
+@for $i from 10 through 20 {
+  .mw#{$i*10} {
+    max-width: 10px * $i;
+  }
+}
+/**
+ * padding
+ */
+// .p0, .p5, ..., p100
+@for $i from 0 through 20 {
+  .p#{$i*5} {
+    padding: 5px * $i;
+  }
+}
+// .padding-tb0, .padding-tb10, ..., .padding-tb30
+@for $i from 0 through 3 {
+  .padding-tb#{$i*10} {
+    padding: 10px * $i 0 10px * $i 0;
+  }
+}
+/**
+ * padding-left
+ */
+// .pl0, .pl5, ..., .pl200
+@for $i from 0 through 40 {
+  .pl#{$i*5} {
+    padding-left: 5px * $i;
+  }
+}
+/**
+ * padding-top
+ */
+// .pt0, .pt5, ..., .pt200
+@for $i from 0 through 40 {
+  .pt#{$i*5} {
+    padding-top: 5px * $i;
+  }
+}
+
+/**
+ * padding-bottom
+ */
+// .pb0, .pb5, ..., .pb200
+@for $i from 0 through 40 {
+  .pb#{$i*5} {
+    padding-bottom: 5px * $i;
+  }
+}
+/**
+ * padding-right
+ */
+// .pr0, .pr5, ..., .pr200
+@for $i from 0 through 40 {
+  .pr#{$i*5} {
+    padding-right: 5px * $i;
+  }
+}
+/**
+ * margin
+ */
+.mlr0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.m-0a {
+  margin: 0 auto;
+}
+/**
+ * margin-right
+ */
+// .mr0, .mr5, ..., .mr50
+@for $i from 0 through 10 {
+  .mr#{$i*5} {
+    margin-right: 5px * $i;
+  }
+}
+/**
+ * Note 尽量使用mt来分隔两个块级元素，而不要使用mb
+ * margin-top
+ */
+// .mt-20, .mt-15, ..., .mt200
+@for $i from -4 through 40 {
+  .mt#{$i*5} {
+    margin-top: 5px * $i;
+  }
+}
+/**
+ * margin-left
+ */
+// .mt-30, .mt-15, ..., .mt200
+@for $i from -6 through 40 {
+  .ml#{$i*5} {
+    margin-left: 5px * $i;
+  }
+}
+/**
+ * Note 尽量使用mt来分隔两个块级元素，而不要使用mb
+ * margin-bottom
+ */
+// .mb0, .mb5, ..., .mb200
+@for $i from 0 through 40 {
+  .mb#{$i*5} {
+    margin-bottom: 5px * $i;
+  }
+}
+
+/**
+ * line-height
+ */
+// .lh0, .lh15, ..., .lh60
+@for $i from 0 through 12 {
+  .lh#{$i*5} {
+    line-height: 5px * $i;
+  }
+}
+
+/**
+ * opacity
+ **/
+@for $i from 0 through 10 {
+  .op#{$i} {
+    opacity: 0.1*$i;
+  }
+}
+
+
+/*
+* float
+*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearbt {
+  clear: both;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+// 清除浮动
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom: 1; // IE6、7上触发元素的hasLayOut机制
+}
+
+/*
+* display
+*/
+.d-b {
+  display: block;
+}
+.d-ib {
+  display: inline-block;
+}
+.d-n {
+  display: none;
+}
+/* flex */
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+/*
+* justify-content
+*/
+.jc-fs {
+  justify-content: flex-start;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
+.jc-c {
+  justify-content: center;
+}
+.jc-sa {
+  justify-content: space-around;
+}
+
+/**
+ * position
+ */
+.p-rl {
+  position: relative;
+}
+.p-as {
+  position: absolute;
+}
+.p-fx {
+  position: fixed;
+}
+
+/**
+ * cursor
+ */
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/**
+ * left
+ */
+// .l-20, .l-15, ..., l100
+@for $i from -4 through 20 {
+  .l#{$i*5} {
+    left: 5px * $i;
+  }
+}
+// .l10p, l15p, ..., l100p
+@for $i from 0 through 100 {
+  .l#{$i*5}p {
+    left: 5% * $i;
+  }
+}
+/**
+ * right
+ */
+// .r0, .r5, ..., r300
+@for $i from 0 through 60 {
+  .r#{$i*5} {
+    right: 5px * $i;
+  }
+}
+// .r10p, r15p, ..., r100p
+@for $i from 0 through 100 {
+  .r#{$i*5}p {
+    right: 5% * $i;
+  }
+}
+/**
+ * top
+ */
+// .t5, .t10, ..., t150
+@for $i from 0 through 30 {
+  .t#{$i*5} {
+    top: 5px * $i;
+  }
+}
+// .t10p, t15p, ..., t100p
+@for $i from 0 through 100 {
+  .t#{$i*5}p {
+    top: 5% * $i;
+  }
+}
+/**
+ * bottom
+ */
+@for $i from 0 through 20 {
+  .b#{$i*5} {
+    bottom: 5px * $i;
+  }
+}
+// .b10p, b15p, ..., b100p
+@for $i from 0 through 100 {
+  .b#{$i*5}p {
+    bottom: 5% * $i;
+  }
+}
+/*
+* margin
+*/
+.mg0 {
+  margin: 0;
+}

@@ -1,0 +1,109 @@
+/**
+ * font
+ */
+// .ft12, .ft14, ..., ..ft40
+@for $i from 6 through 20 {
+  .ft#{$i*2} {
+    font-size: 2px * $i;
+  }
+}
+
+// .ft10rem, .ft11rem, ..., .ft30rem
+@for $i from 10 through 30 {
+  .ft#{$i}rem {
+    font-size: 1rem * 0.1 * $i;
+  }
+}
+
+.ft-f-regular {
+  font-family: regular;
+}
+
+.ft-bd {
+  font-weight: bold;
+}
+
+.ft-italic {
+  font-style: italic;
+}
+/**
+ * line-height 单位px
+ */
+// .lh10, .lh20, ... .lh100
+@for $i from 1 through 10 {
+  .lh#{$i*10} {
+    line-height: 10px * $i;
+  }
+}
+/**
+ * line-height 单位%
+ */
+// .lh10p, .lh20p, ... .lh200p
+@for $i from 1 through 20 {
+  .lh#{$i*10}p {
+    line-height: 10% * $i;
+  }
+}
+/**
+ * 设置相同的height与line-height的文字垂直居中方式
+ */
+// .h-lh5, .h-lh10, ... .h-lh100
+@for $i from 1 through 20 {
+  .h-lh#{$i*5} {
+    height: 5px * $i;
+    line-height: 5px * $i;
+  }
+}
+/**
+ * letter-spacing
+ */
+@for $i from -100 through 100 {
+  .ls#{$i} {
+    letter-spacing: $i * 0.01px;
+  }
+}
+/**
+ * vertical-align
+ */
+.top {
+  vertical-align: top;
+}
+.v-text-top {
+  vertical-align: text-top;
+}
+.bottom {
+  vertical-align: bottom;
+}
+.middle {
+  vertical-align: middle;
+}
+.super {
+  vertical-align: super;
+}
+.sub {
+  vertical-align: sub;
+}
+.baseline {
+  vertical-align: baseline;
+}
+.wk-baseline {
+  vertical-align: -webkit-baseline-middle;
+}
+/**
+ * text-align
+ */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+/**
+ * 换行
+ */
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}
