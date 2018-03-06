@@ -18,7 +18,13 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "axios": "^0.17.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
+  },
+  "proxy": {
+    "/proxy-api": {
+      "target": "http://localhost:8000"
+    }
   }
 }
