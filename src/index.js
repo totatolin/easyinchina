@@ -10,11 +10,11 @@ import './style/color.scss';
 import './style/font.scss';
 import './style/style.scss';
 
-// import { LocaleProvider, DatePicker, message } from 'antd';
+import { LocaleProvider, DatePicker, messagef, Menu } from 'antd';
 // import zhCN from 'antd/lib/locale-provider/zh_CN';
 // import moment from 'moment';
 // import 'moment/locale/zh-cn';
-// import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 // moment.locale('zh-cn');
 

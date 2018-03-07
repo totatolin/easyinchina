@@ -1,5 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { Menu } from 'antd';
+import './router.scss';
 import Life from '../life/life.jsx';
 import Work from '../work/work.jsx';
 class Routers extends React.Component {
@@ -9,14 +11,16 @@ class Routers extends React.Component {
   render () {
     return (
       <Router>
-        <div>
-          <div>
-            <div>
-              <Link to="/life">life</Link>
-            </div>
-            <div>
-              <Link to="/work">work</Link>
-            </div>
+        <div className="wrap">
+          <div className="router mt50">
+            <Menu style={{height: '100%'}}>
+              <Menu.Item key="1">
+                <Link to="/life">life</Link>
+              </Menu.Item>
+              <Menu.Item key="2">
+                <Link to="/work">work</Link>
+              </Menu.Item>
+            </Menu>
           </div>
 
           <div>
