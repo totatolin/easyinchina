@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Head from './components/head/head.jsx';
+import Modals from './components/modal/modal.jsx';
 import Routers from './components/router/router.jsx';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="app">
         <Head />
+        <Modals />
         <Routers />
       </div>
     );

@@ -2,8 +2,8 @@ import React from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import './router.scss';
-import Life from '../life/life.jsx';
-import Work from '../work/work.jsx';
+import Life from './life/life.jsx';
+import Work from './work/work.jsx';
 class Routers extends React.Component {
   constructor() {
     super();
