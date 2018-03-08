@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import Head from './components/head/head.jsx';
-import Modals from './components/modal/modal.jsx';
-import Routers from './components/router/router.jsx';
+import Routers from './components/wrap/router.jsx';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <Head />
-        <Modals />
         <Routers />
       </div>
     );
