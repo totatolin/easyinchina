@@ -37,6 +37,9 @@ class Routers extends React.Component {
                 <FirstTabs type="work" showSecondTabs={this.showSecondTabs.bind(this)} />
               </Menu.Item>
               <Menu.Item key="3">
+                <Link to="/life">life</Link>
+              </Menu.Item>
+              <Menu.Item key="4">
                 <Link to="/work">work</Link>
               </Menu.Item>
             </Menu>
