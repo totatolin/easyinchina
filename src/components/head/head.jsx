@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './head.scss';
-import Modals from '../modal/login/login.jsx';
+import Modals from '../modal/modal.jsx';
 
 class Head extends Component {
   render() {

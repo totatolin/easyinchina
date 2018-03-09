@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Login from './login/login.jsx';
 
 class Modals extends React.Component {
   state = {
@@ -27,9 +28,8 @@ class Modals extends React.Component {
         <Button type="primary" onClick={this.showModal}>
           Open
         </Button>
-        <Modal
+        <Modal className="modal"
           visible={visible}
-          title="Title"
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
@@ -39,11 +39,7 @@ class Modals extends React.Component {
             </Button>,
           ]}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Login />
         </Modal>
       </div>
     );
