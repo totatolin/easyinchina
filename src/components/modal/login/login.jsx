@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import qs from 'qs';
 import './login.scss';
 
 class Login extends React.Component {
   login = () => {
-    axios.get('/proxy-api/account/login')
+    axios.post('/proxy-api/account/login', qs.stringify({
+      username: 'linsen',
+      password: 'ls3535135'
+    }))
     .then((res) => {})
   }
   render() {
