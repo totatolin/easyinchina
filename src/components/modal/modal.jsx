@@ -32,6 +32,7 @@ class Modals extends React.Component {
           visible={visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          width="400px"
           footer={[
             <Button key="back" onClick={this.handleCancel}>Return</Button>,
             <Button key="submit" type="primary" loading={loading} onClick={this.handleOk}>

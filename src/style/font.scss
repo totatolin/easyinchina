@@ -2,7 +2,7 @@
  * font
  */
 // .ft12, .ft14, ..., ..ft40
-@for $i from 6 through 20 {
+@for $i from 6 through 30 {
   .ft#{$i*2} {
     font-size: 2px * $i;
   }
