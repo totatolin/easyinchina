@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Modal, Button } from 'antd';
 import Login from './login/login.jsx';
 

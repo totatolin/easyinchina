@@ -7,7 +7,7 @@ class Head extends Component {
     return (
       <div className="head ft20 color-white">
         <p className="pull-left">Easy in China</p>
-       <Modals />
+        <Modals />
       </div>
     );
   }
