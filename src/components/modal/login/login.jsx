@@ -6,8 +6,8 @@ import './login.scss';
 class Login extends React.Component {
   login = () => {
     axios.post('/proxy-api/account/login', qs.stringify({
-      username: 'linsen',
-      password: 'ls3535135'
+      username: this.refs.username.value,
+      password: this.refs.password.value
     }))
     .then((res) => {})
   }
@@ -19,8 +19,8 @@ class Login extends React.Component {
           <h2 className="ft30">Join us, enjoy easier life</h2>
         </div>
         <div className="input">
-          <input placeholder="Username or E-mail address" className="wfull h50"></input>
-          <input placeholder="Password" className="wfull h50"></input>
+          <input placeholder="Username or E-mail address" className="wfull h50" ref="username"></input>
+          <input placeholder="Password" className="wfull h50" ref="password"></input>
         </div>
         <div className="btn wfull h40 ft18 lh40 mt30 color-white bc-blue1" onClick={this.login}>Login</div>
       </div>
