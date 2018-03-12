@@ -16,15 +16,14 @@ class Routers extends React.Component {
   }
   showSecondTabs = (selectedTab) => {
     this.state.selectedTab = selectedTab;
-    this.setState({secondTabsShow: true});
+    setTimeout(() => {
+      this.setState({secondTabsShow: true});
+    }, 200)
+  }
+  clickOut = () => {
+    this.setState({secondTabsShow: false});
   }
   render () {
-    var secondTabs = null;
-    if (this.state.secondTabsShow) {
-      secondTabs = <SecondTabs list={this.state.selectedTab} />;
-    } else {
-      secondTabs = null;
-    }
     return (
       <Router>
         <div className="wrap">
@@ -51,7 +50,7 @@ class Routers extends React.Component {
             <Route path="/work" component={Work} />
           </div>
 
-          {secondTabs} // 子项tab
+          <SecondTabs list={this.state.selectedTab} secondTabsShow={this.state.secondTabsShow} clickOut={this.clickOut.bind(this)} /> // 子项tab
         </div>
       </Router>
     )

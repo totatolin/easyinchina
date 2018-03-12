@@ -3,25 +3,30 @@ import './second-tabs.scss';
 
 class SecondTabs extends Component {
   componentDidMount(){
-    document.onclick=this.two;
+    document.onclick=this.clickOut;
   }
-  one = (e) => {
-    console.log(this)
+  clickIn = (e) => {
     e.nativeEvent.stopImmediatePropagation();
-    alert(1)
   }
-  two = () => {
-    console.log(this)
-    alert(2)
+  clickOut = () => {
+    this.props.clickOut();
   }
-  render() {
-    return (
-      <div className="second-tabs" onClick={this.one}>
+  render () {
+    var secondTabs = null;
+    if (this.props.secondTabsShow) {
+      secondTabs = <div className="second-tabs" onClick={this.clickIn}>
         {this.props.list.map((item) => {
           return (
             <p key={item}>{item}</p>
           )
         })}
+      </div>;
+    } else {
+      secondTabs = null;
+    }
+    return (
+      <div>
+        {secondTabs}
       </div>
     );
   }
