@@ -1,13 +1,16 @@
 import React from 'react';
 import { Modal, Button } from 'antd';
 import Login from './login/login.jsx';
+import Register from './register/register.jsx';
 
 class Modals extends React.Component {
   state = {
     loading: false,
     visible: false,
+    modal: null
   }
   showModal = () => {
+    this.switchType();
     this.setState({
       visible: true,
     });
@@ -21,8 +24,22 @@ class Modals extends React.Component {
   handleCancel = () => {
     this.setState({ visible: false });
   }
+  showRegister = () => {
+    this.setState({modal: <Register />});
+  }
+  switchType = () => {
+    let modal
+    switch (this.props.type) {
+      case 'login':
+        this.setState({modal: <Login showRegister={this.showRegister.bind(this)} />})
+        break
+      case 'register':
+        this.setState({modal: <Register />})
+        break
+    }
+  }
   render() {
-    const { visible, loading } = this.state;
+    const { visible, loading, modal } = this.state;
     return (
       <div>
         <Button type="primary" onClick={this.showModal}>
@@ -40,7 +57,7 @@ class Modals extends React.Component {
             </Button>,
           ]}
         >
-          <Login />
+          {modal}
         </Modal>
       </div>
     );

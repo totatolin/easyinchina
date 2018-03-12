@@ -6,7 +6,7 @@ class FirstTabs extends Component {
     super();
     this.state = {
       allSecondTabs: {
-        'life': [1, 2, 3],
+        'life': [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
         'work': [4, 5, 6]
       }
     }

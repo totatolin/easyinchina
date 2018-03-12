@@ -17,7 +17,7 @@ class SecondTabs extends Component {
       secondTabs = <div className="second-tabs" onClick={this.clickIn}>
         {this.props.list.map((item) => {
           return (
-            <p key={item}>{item}</p>
+            <div className="child-tab" key={item}>{item}</div>
           )
         })}
       </div>;
