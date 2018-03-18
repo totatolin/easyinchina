@@ -1,15 +1,17 @@
 import React from 'react';
-import './router.scss';
+import './wrap.scss';
 import Tabs from './tabs/tabs';
-class Routers extends React.Component {
+import Sidebar from './sidebar/sidebar';
+class wrap extends React.Component {
   render () {
     return (
       <div>
         <div className="wrap">
           <Tabs />
+          <Sidebar />
         </div>
       </div>
     )
   }
 }
-export default Routers;
+export default wrap;
