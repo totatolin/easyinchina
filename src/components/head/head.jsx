@@ -6,7 +6,6 @@ import { mapStateToProps, mapDispatchToProps } from '../../redux/action/index';
 
 class Head extends Component {
   render() {
-  	console.log(this)
     return (
       <div className="head ft20 color-white">
         <p className="pull-left">Easy in China</p>
@@ -16,4 +15,4 @@ class Head extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Head)
+export default connect(mapStateToProps, mapDispatchToProps)(Head);

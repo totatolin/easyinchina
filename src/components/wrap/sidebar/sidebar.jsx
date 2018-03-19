@@ -2,7 +2,7 @@ import React from 'react';
 import './sidebar.scss';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { is, fromJS} from 'immutable';
+import { mapStateToProps, mapDispatchToProps } from '../../../redux/action/index';
 class Sidebar extends React.Component {
   constructor() {
     super();
@@ -13,10 +13,12 @@ class Sidebar extends React.Component {
     console.log(this)
   }
   render () {
+    const {text, onChangeText, onButtonClick} = this.props;
     return (
       <div className="sidebar">
         <div>
-          <span onClick={this.aaa}>中文</span>
+          <h1 onClick={onChangeText}> {text} </h1> 
+          <span onClick={onButtonClick}>中文</span>
           <span>English</span>
         </div>
         <FormattedMessage
@@ -28,4 +30,4 @@ class Sidebar extends React.Component {
     )
   }
 }
-export default Sidebar;
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

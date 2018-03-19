@@ -7,7 +7,6 @@ import { mapStateToProps, mapDispatchToProps } from './redux/action/index';
 
 class App extends Component {
   render() {
-    console.log(this)
     return (
       <div className="app">
         <Head />
