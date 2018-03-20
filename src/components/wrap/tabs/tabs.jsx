@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import FirstTabs from './first-tabs/first-tabs';
 import SecondTabs from './second-tabs/second-tabs';
@@ -9,14 +8,18 @@ class Tabs extends React.Component {
   constructor() {
     super();
     this.state = {
+      firstTabsType: String,
       secondTabsShow: false,
       selectedTab: Array
     }
   }
-  showSecondTabs = (selectedTab) => {
+  showSecondTabs = (selectedTab, type) => {
     this.state.selectedTab = selectedTab;
     setTimeout(() => {
-      this.setState({secondTabsShow: true});
+      this.setState({
+        secondTabsShow: true,
+        firstTabsType: type
+      });
     }, 200)
   }
   clickOut = () => {
@@ -24,34 +27,17 @@ class Tabs extends React.Component {
   }
   render () {
     return (
-      <Router>
-        <div>
-          <div className="router mt50">
-            <Menu style={{height: '100%'}}>
-              <Menu.Item key="1">
-                <FirstTabs type="life" showSecondTabs={this.showSecondTabs.bind(this)} />
-              </Menu.Item>
-              <Menu.Item key="2">
-                <FirstTabs type="work" showSecondTabs={this.showSecondTabs.bind(this)} />
-              </Menu.Item>
-              <Menu.Item key="3">
-                <Link to="/life">life</Link>
-              </Menu.Item>
-              <Menu.Item key="4">
-                <Link to="/work">work</Link>
-              </Menu.Item>
-            </Menu>
-          </div>
-
-          <div>
-            <Route exact path="/" component={Life} />
-            <Route path="/life" component={Life} />
-            <Route path="/work" component={Work} />
-          </div>
-
-          <SecondTabs list={this.state.selectedTab} secondTabsShow={this.state.secondTabsShow} clickOut={this.clickOut.bind(this)} />
-        </div>
-      </Router>
+      <div className="router mt50">
+        <Menu style={{height: '100%'}}>
+          <Menu.Item key="1">
+            <FirstTabs type="life" showSecondTabs={this.showSecondTabs.bind(this)} />
+          </Menu.Item>
+          <Menu.Item key="2">
+            <FirstTabs type="work" showSecondTabs={this.showSecondTabs.bind(this)} />
+          </Menu.Item>
+        </Menu>
+        <SecondTabs type={this.state.firstTabsType} list={this.state.selectedTab} secondTabsShow={this.state.secondTabsShow} clickOut={this.clickOut.bind(this)} />
+      </div>
     )
   }
 }

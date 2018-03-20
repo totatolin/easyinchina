@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { HashRouter as Router, Link } from 'react-router-dom';
 import './second-tabs.scss';
 
 class SecondTabs extends Component {
@@ -11,13 +12,20 @@ class SecondTabs extends Component {
   clickOut = () => {
     this.props.clickOut();
   }
+  showContent = (item) => {
+    console.log(item)
+  }
   render () {
     var secondTabs = null;
     if (this.props.secondTabsShow) {
       secondTabs = <div className="second-tabs" onClick={this.clickIn}>
         {this.props.list.map((item) => {
           return (
-            <div className="child-tab" key={item}>{item}</div>
+            <div className="child-tab" key={item} onClick={this.showContent.bind(this, item)}>
+              <Router>
+                <Link to={"/" + this.props.type + "/" + item}>{item}</Link>
+              </Router>
+            </div>
           )
         })}
       </div>;

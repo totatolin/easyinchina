@@ -17,9 +17,9 @@ class Sidebar extends React.Component {
     return (
       <div className="sidebar">
         <div>
-          <h1 onClick={onChangeText}> {text} </h1> 
+          <h1></h1> 
           <span onClick={onButtonClick}>中文</span>
-          <span>English</span>
+          <span onClick={onChangeText}>English</span>
         </div>
         <FormattedMessage
           id='hello'

@@ -13,7 +13,7 @@ class FirstTabs extends Component {
   }
   showSecondTabs = () => {
     let selectedTab = this.state.allSecondTabs[this.props.type]
-    this.props.showSecondTabs(selectedTab)
+    this.props.showSecondTabs(selectedTab, this.props.type)
   }
   render() {
     return (
