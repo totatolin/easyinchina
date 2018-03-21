@@ -14,6 +14,7 @@ class SecondTabs extends Component {
   }
   showContent = (item) => {
     console.log(item)
+    this.clickOut();
   }
   render () {
     var secondTabs = null;

@@ -2,8 +2,6 @@ import React from 'react';
 import { Menu } from 'antd';
 import FirstTabs from './first-tabs/first-tabs';
 import SecondTabs from './second-tabs/second-tabs';
-import Life from '../life/life';
-import Work from '../work/work';
 class Tabs extends React.Component {
   constructor() {
     super();
@@ -30,7 +28,7 @@ class Tabs extends React.Component {
       <div className="router mt50">
         <Menu style={{height: '100%'}}>
           <Menu.Item key="1">
-            <FirstTabs type="life" showSecondTabs={this.showSecondTabs.bind(this)} />
+            <FirstTabs type="restaurants" showSecondTabs={this.showSecondTabs.bind(this)} />
           </Menu.Item>
           <Menu.Item key="2">
             <FirstTabs type="work" showSecondTabs={this.showSecondTabs.bind(this)} />

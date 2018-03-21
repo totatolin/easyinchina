@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import Life from '../components/wrap/life/life';
+import American from '../components/wrap/contents/restaurants/american/american';
 class Routers extends React.Component {
   constructor() {
     super();
@@ -10,7 +10,7 @@ class Routers extends React.Component {
   render () {
     return (
       <Router>
-        <Route path="/life/1" component={Life} />
+        <Route path="/restaurants/american" component={American} />
       </Router>
     )
   }
