@@ -8,8 +8,12 @@ class Head extends Component {
   render() {
     return (
       <div className="head ft20 color-white">
-        <p className="pull-left">Easy in China</p>
-        <Modals type="login" />
+      	<div className="head-content">
+      		<p className="pull-left">Easy in HangZhou</p>
+          <div className="pull-right">
+            <Modals type="login" />
+          </div>
+      	</div>
       </div>
     );
   }

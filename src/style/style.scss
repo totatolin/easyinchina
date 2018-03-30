@@ -18,7 +18,9 @@ body {
   color: #333;
   background-color: #f3f3f0;
   width: 100%;
+  min-width: 800px;
   height: 100%;
+  overflow-x: auto;
   font-size: 10px;
   font-family: PingFangSC-Regular, sans-serif, "Helvetica Neue", Helvetica, "Hiragino Sans GB","Microsoft YaHei", "微软雅黑",  "WenQuanYi Micro Hei", arial;
 }

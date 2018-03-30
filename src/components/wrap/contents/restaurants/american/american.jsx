@@ -10,7 +10,7 @@ class American extends React.Component {
     }
   }
   componentDidMount = () => {
-    axios.post('/proxy-api/list/list', qs.stringify({
+    axios.post('/proxy-api/shop-list/list', qs.stringify({
       username: 'linsen',
       password: 'ls3535135'
     }))
