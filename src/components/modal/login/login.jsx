@@ -18,8 +18,8 @@ class Login extends React.Component {
     return (
       <div className="login">
         <div className="title">
-          <h2 className="ft50">Easy In China</h2>
-          <h2 className="ft30">Join us, enjoy easier life</h2>
+          <h2 className="ft50 color-blue1">Easy In China</h2>
+          <h2 className="ft30 color-blue1">Join us, enjoy easier life</h2>
         </div>
         <div className="input">
           <input type="text" placeholder="Username or E-mail address" className="wfull h50" ref="username"></input>

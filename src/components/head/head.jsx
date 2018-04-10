@@ -10,6 +10,7 @@ class Head extends Component {
       <div className="head ft20 color-white">
       	<div className="head-content">
       		<p className="pull-left">Easy in HangZhou</p>
+          <input className="w300 h40"></input>
           <div className="pull-right">
             <Modals type="login" />
           </div>

@@ -42,9 +42,9 @@ class Modals extends React.Component {
     const { visible, loading, modal } = this.state;
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>
-          Open
-        </Button>
+        <div type="primary" className="cursor-pointer" onClick={this.showModal}>
+          Login in
+        </div>
         <Modal className="modal"
           visible={visible}
           onOk={this.handleOk}
