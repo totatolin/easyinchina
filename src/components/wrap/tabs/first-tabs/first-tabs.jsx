@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown } from 'antd';
+import { HashRouter as Router, Link } from 'react-router-dom';
 // import './first-tabs.scss';
 
 class FirstTabs extends Component {
@@ -17,17 +18,18 @@ class FirstTabs extends Component {
     this.props.showSecondTabs(selectedTab, this.props.type)
   }
   render() {
+    const {allSecondTabs} = this.state
     const menu = (
       <Menu>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
-        </Menu.Item>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">2nd menu item</a>
-        </Menu.Item>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3rd menu item</a>
-        </Menu.Item>
+        {allSecondTabs[this.props.type].map((item) => {
+        return (
+          <Menu.Item>
+            <Router>
+              <Link to={"/" + this.props.type + "/" + item}>{item}</Link>
+            </Router>
+          </Menu.Item>
+        )
+      })}
       </Menu>
     )
     return (
