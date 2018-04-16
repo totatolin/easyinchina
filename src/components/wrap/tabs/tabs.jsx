@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from 'antd';
 import FirstTabs from './first-tabs/first-tabs';
 import SecondTabs from './second-tabs/second-tabs';
+import './tabs.scss';
 class Tabs extends React.Component {
   constructor() {
     super();
@@ -25,7 +26,7 @@ class Tabs extends React.Component {
   }
   render () {
     return (
-      <div className="tabs mt50">
+      <div className="tabs mt60">
         <Menu style={{height: '100%'}} mode="horizontal">
           <Menu.Item key="1">
             <FirstTabs type="restaurants" showSecondTabs={this.showSecondTabs.bind(this)} />

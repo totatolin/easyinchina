@@ -1,0 +1,17 @@
+.ant-menu-item {
+  width: 150px;
+  @media screen and (max-width: 1200px) {
+    width: 100px;
+  }
+  padding: 0 !important;
+  .ant-dropdown-link {
+    font-size: 18px;
+    height: 58px;
+    line-height: 58px;
+    margin-left: 0;
+    text-align: center;
+    &:hover {
+      background: #56cbc8;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown } from 'antd';
 import { HashRouter as Router, Link } from 'react-router-dom';
-// import './first-tabs.scss';
+import './first-tabs.scss';
 
 class FirstTabs extends Component {
   constructor() {
