@@ -9,8 +9,10 @@ class wrap extends React.Component {
       <div>
         <div className="wrap">
           <Tabs />
-          <Contents />
-          <Sidebar />
+          <div className="body">
+            <Contents />
+            <Sidebar />
+          </div>
         </div>
       </div>
     )
