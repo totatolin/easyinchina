@@ -25,8 +25,8 @@ class Tabs extends React.Component {
   }
   render () {
     return (
-      <div className="router mt50">
-        <Menu style={{height: '100%'}}>
+      <div className="tabs mt50">
+        <Menu style={{height: '100%'}} mode="horizontal">
           <Menu.Item key="1">
             <FirstTabs type="restaurants" showSecondTabs={this.showSecondTabs.bind(this)} />
           </Menu.Item>

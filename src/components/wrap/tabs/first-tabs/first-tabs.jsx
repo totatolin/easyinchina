@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Menu, Dropdown } from 'antd';
 // import './first-tabs.scss';
 
 class FirstTabs extends Component {
@@ -16,8 +17,26 @@ class FirstTabs extends Component {
     this.props.showSecondTabs(selectedTab, this.props.type)
   }
   render() {
+    const menu = (
+      <Menu>
+        <Menu.Item>
+          <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
+        </Menu.Item>
+        <Menu.Item>
+          <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">2nd menu item</a>
+        </Menu.Item>
+        <Menu.Item>
+          <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3rd menu item</a>
+        </Menu.Item>
+      </Menu>
+    )
     return (
-      <a onClick={this.showSecondTabs}>{this.props.type}</a>
+      // <a onClick={this.showSecondTabs}>{this.props.type}</a>
+      <Dropdown overlay={menu} placement="bottomCenter">
+        <a className="ant-dropdown-link" href="#">
+          {this.props.type}
+        </a>
+      </Dropdown>
     );
   }
 }
