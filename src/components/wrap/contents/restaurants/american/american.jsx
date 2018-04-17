@@ -19,7 +19,7 @@ class American extends React.Component {
   render () {
     return (
       <div className="american">
-        {[1,2,3].map((item) => {
+        {[1,2,3,4,5].map((item) => {
           return (
             <Item />
           )
