@@ -7,12 +7,13 @@ class Item extends React.Component {
     }
   }
   render () {
+    const item = this.props.item
     return (
       <div className="item">
         <div className="wfull h200">
           <img className="w200 h200 pull-left" src={require('../../../../images/1.jpg')} />
           <div className="w200 h200 ml10 pull-left">
-            <p className="ft18">The name of shop</p>
+            <p className="ft18">{item.shop_name}</p>
             <p>Dinner;American;Burger;(09:00~22:00)</p>
             <p>Address:Yuhang xxRoad</p>
             <p>地址： 余杭神马路36号</p>

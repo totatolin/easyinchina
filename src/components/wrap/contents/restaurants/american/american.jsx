@@ -7,6 +7,7 @@ class American extends React.Component {
   constructor() {
     super();
     this.state = {
+      result: null
     }
   }
   componentDidMount = () => {
@@ -14,16 +15,24 @@ class American extends React.Component {
       username: 'linsen',
       password: 'ls3535135'
     }))
-    .then((res) => {})
+    .then((res) => {
+      this.setState({
+        result: <div>
+          {res.data.payload.map((item) => {
+            return (
+              <Item item={item} />
+            )
+          })}
+        </div>
+      });
+    })
   }
   render () {
+    const {result} = this.state;
+    console.log(result)
     return (
       <div className="american">
-        {[1,2,3,4,5].map((item) => {
-          return (
-            <Item />
-          )
-        })}
+        {result}
       </div>
     )
   }
