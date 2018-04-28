@@ -1,9 +1,18 @@
 import React from 'react';
+import axios from 'axios';
 import qs from 'qs';
 import './shopdetails.scss';
 class American extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount = () => {
+    axios.post('/proxy-api/shop-list/item', qs.stringify({
+      id: this.props.match.params.id
+    }))
+    .then((res) => {
+      console.log(res)
+    })
   }
   render () {
     return (

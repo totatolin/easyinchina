@@ -15,7 +15,7 @@ class Routers extends React.Component {
           <Route path="/restaurants/american" component={American} />
         </Router>
         <Router>
-          <Route path="/shopdetails" component={ShopDetails} />
+          <Route path="/shopdetails/:id" component={ShopDetails} />
         </Router>
       </div>
     )
